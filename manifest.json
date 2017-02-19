@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Quora No Login",
+  "description": "Get rid of that annoying modal forcing you to login/signup when you click a link on Quora",
+  "version": "0.1",
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "*://www.quora.com/*"
+    ],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "matches": [
+      "*://www.quora.com/*"
+    ],
+    "scripts": ["bg.js"]
+  }
+}
