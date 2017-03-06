@@ -6,7 +6,6 @@ if (document.getElementsByClassName('signup_wall_content')[0]) {
 
 window.addEventListener('click', function(event) {
   let questionLink = cardLink(event.target) || findLink(event.path);
-  console.log('event is: ', event);
   if (questionLink) {
     chrome.runtime.sendMessage({
       reload: true,
