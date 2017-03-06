@@ -4,8 +4,8 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
       'active': true,
       'lastFocusedWindow': true
     }, function(tabs) {
-      chrome.tabs.update(sender.tab.id, {
-        url: tabs[0].url
+      chrome.tabs.update(tabs[0].id, {
+        url: request.url || tabs[0].url
       });
     });
   }
